@@ -1,4 +1,4 @@
-@use "variable" as var;
+@use "variable"as var;
 
 .header {
     color: var.$color-sub;
@@ -13,11 +13,23 @@
         justify-content: space-between;
     }
 
+    h1 {
+        a:hover {
+            color: var.$color-accent;
+
+        }
+    }
+
     &__list {
         display: flex;
     }
 
     &__item {
         margin-left: 20px;
+
+        a:hover {
+            color: var.$color-accent;
+        }
     }
+
 }

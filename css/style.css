@@ -17,11 +17,17 @@
   display: flex;
   justify-content: space-between;
 }
+.header h1 a:hover {
+  color: #B3424A;
+}
 .header__list {
   display: flex;
 }
 .header__item {
   margin-left: 20px;
+}
+.header__item a:hover {
+  color: #B3424A;
 }
 
 .footer {
@@ -71,6 +77,11 @@
 }
 .btn.--contact {
   margin-top: 40px;
+}
+.btn:hover {
+  color: #EBE6E1;
+  background-color: #B3424A;
+  border: 1px solid #B3424A;
 }
 
 .account {
