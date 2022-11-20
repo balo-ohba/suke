@@ -1,0 +1,54 @@
+@use "variable"as var;
+
+.sectionTitle {
+    font-size: 32px;
+    margin: 24px;
+    position: relative;
+
+    //左線
+    &::before {
+        width: 1px;
+        height: calc(24px + 32px + 40px);
+        background-color: var.$color-sub;
+        display: block;
+        position: absolute;
+        top: -24px;
+        left: -24px;
+        content: "";
+    }
+
+    //下線
+    &::after {
+        width: 250px;
+        height: 3px;
+        background-color: var.$color-sub;
+        display: block;
+        position: absolute;
+        bottom: -24px;
+        left: -40px;
+        content: "";
+    }
+}
+
+.btn-outer {
+    text-align: center;
+}
+
+.btn {
+    color: var.$color-accent;
+    border: 1px solid var.$color-accent;
+    padding: 16px;
+    display: inline-block;
+
+    &.--works {
+        margin-top: 120px;
+    }
+
+    &.--contact {
+        margin-top: 40px;
+    }
+}
+
+.account {
+    color: var.$color-accent;
+}
