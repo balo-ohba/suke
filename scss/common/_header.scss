@@ -1,0 +1,23 @@
+@use "variable" as var;
+
+.header {
+    color: var.$color-sub;
+    margin: 20px 120px;
+    position: fixed;
+    width: 100%;
+    max-width: calc(100% - 240px);
+    z-index: 1000;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        margin-left: 20px;
+    }
+}

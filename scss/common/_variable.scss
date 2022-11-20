@@ -1,0 +1,24 @@
+/* color
+   ----------------------------------------------------------------- */
+$color-base:#EBE6E1;
+$color-sub:#292724;
+$color-accent:#B3424A;
+
+/* font
+   ----------------------------------------------------------------- */
+@mixin font() {
+   color: $color-sub;
+}
+
+/* メディアクエリ
+   ----------------------------------------------------------------- */
+$breakpoint: (sp: 'screen and (max-width: 768px)',
+   tab: 'screen and (min-width: 769px)',
+   pc: 'screen and (min-width: 1025px)'
+);
+
+@mixin mq($bp) {
+   @media #{map-get($breakpoint, $bp)} {
+      @content;
+   }
+}
