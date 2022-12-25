@@ -1,0 +1,140 @@
+@use "../common/variable"as var;
+
+.works {
+    background-color: var.$color-base;
+
+    &__inner {
+        padding: 8.33%; // 横幅1440pxに対して、120pxずつ取りたい
+    }
+
+    &__btn {
+        text-align: center;
+    }
+
+    &__container {
+        margin-left: calc(196px - 120px);
+        position: relative;
+
+        //右線
+        &::before {
+            width: 1px;
+            height: 120%;
+            background-color: var.$color-sub;
+            display: block;
+            position: absolute;
+            top: -24px;
+            left: 0;
+            content: "";
+        }
+
+        //下線
+        &::after {
+            width: calc(100% + 20px);
+            height: 1px;
+            background-color: var.$color-sub;
+            display: block;
+            position: absolute;
+            bottom: -40px;
+            left: -20px;
+            content: "";
+        }
+
+        &.--movie {
+            margin-top: 160px;
+
+            @include var.mq(sp) {
+                margin-top: 120px;
+            }
+
+        }
+
+        &.--img {
+            margin-top: 320px;
+            margin-bottom: 160px;
+
+            @include var.mq(sp) {
+                margin-top: 160px;
+                margin-bottom: 120px;
+            }
+        }
+
+        @include var.mq(sp) {
+            margin-left: 0;
+        }
+    }
+
+    &__title {
+        font-size: 24px;
+        margin: 24px;
+        position: relative;
+
+        //下線
+        &::after {
+            width: 380px;
+            height: 3px;
+            background-color: var.$color-accent;
+            display: block;
+            position: absolute;
+            bottom: -24px;
+            left: -40px;
+            content: "";
+        }
+
+        @include var.mq(sp) {
+            margin: 8px;
+
+            //下線
+            &::after {
+                width: calc(100% + 8px + 24px);
+                left: -24px;
+            }
+        }
+    }
+    
+    &__block {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__text {
+        width: 80%;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: justify;
+        position: relative;
+
+        @include var.mq(sp) {
+            width: 90%;
+        }
+
+        span {
+            display: block;
+            margin-bottom: 16px;
+        }
+    }
+
+    &__video {
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        margin: 40px 0;
+
+        @include var.mq(sp) {
+            width: 90%;
+        }
+    }
+
+    &__img {
+        width: 80%;
+        margin: 40px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 8px;
+
+        img {
+            width: 100%;
+        }
+    }
+}

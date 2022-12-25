@@ -1,0 +1,21 @@
+/* common
+   ----------------------------------------------------------------- */
+@use "common/variable"as var;
+@use "common/header";
+@use "common/footer";
+@use "common/assets";
+@use "common/contact";
+@use "common/mainArea";
+
+/* topPage
+   ----------------------------------------------------------------- */
+@use "topPage/works";
+@use "topPage/about";
+
+html {
+   scroll-behavior: smooth;
+}
+
+main {
+   @include var.font();
+}

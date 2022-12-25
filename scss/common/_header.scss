@@ -1,0 +1,39 @@
+@use "variable"as var;
+
+.header {
+    color: var.$color-accent;
+    margin: 20px 120px;
+    position: fixed;
+    width: 100%;
+    max-width: calc(100% - 240px);
+    z-index: 1000;
+
+    @include var.mq(sp) {
+        margin: 20px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        display: flex;
+
+        @include var.mq(sp) {
+            display: none;
+        }
+    }
+
+    &__item {
+        margin-left: 20px;
+    }
+
+    a {
+        color: #fff;
+
+        &:hover {
+            color: var.$color-accent;
+        }
+    }
+}
