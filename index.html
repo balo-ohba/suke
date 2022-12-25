@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>すけ</title>
-    <meta content="「すけ」のポートフォリオサイト" name="description">
+    <title>すけ｜映像クリエイター</title>
+    <meta content="フリーランスの映像クリエイター「すけ」のポートフォリオサイト" name="description">
     <!-- css -->
     <link rel="stylesheet" href="css/html5reset-1.6.1.css">
     <link rel="stylesheet" href="css/style.css">
@@ -17,75 +17,90 @@
         <div class="header__inner">
             <h1><a href="">SUKE</a></h1>
             <nav>
+                <h2 class="visually-hidden">ナビゲーションメニュー</h2>
                 <ul class="header__list">
-                    <li class="header__item"><a href="listPage.html">Works</a></li>
-                    <li class="header__item"><a href="https://www.instagram.com/meru_nukumi/" target="_blank" rel="noopener noreferrer">Contact</a></li>
-                    <li class="header__item"><a href="https://www.youtube.com/channel/UCyMbAfepldXdFh0UWnM6kbw/featured" target="_blank" rel="noopener noreferrer">YouTube</a></li>
-                    <li class="header__item"><a href="https://www.instagram.com/vickeblanka/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+                    <li class="header__item"><a href="#works">Works</a></li>
+                    <li class="header__item"><a href="#about">About</a></li>
+                    <li class="header__item"><a href="https://forms.gle/y1Hd1hg1sJMbh59D9" target="_blank"
+                            rel="noopener noreferrer">Contact</a></li>
+                    <li class="header__item"><a href="https://www.youtube.com/"
+                            target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li class="header__item"><a href="https://www.instagram.com/" target="_blank"
+                            rel="noopener noreferrer">Instagram</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="mainArea">
-            <h2 class="mainArea__title">SUKE</h2>
-            <span class="mainArea__sub">制作に対する思い・ポリシーを一言で</span>
-        </section>
+        <div class="mainArea">
+            <video class="mainArea__video" autoplay muted loop>
+                <source src="img/top.mp4" type="video/mp4">
+                <img src="">
+            </video>
+        </div>
 
-        <section class="works">
+        <section class="works" id="works">
             <div class="works__inner">
                 <h2 class="sectionTitle">Works</h2>
 
-                <div class="works-block">
-                    <h3 class="works-block__title">モーショングラフィックス</h3>
-                    <div class="works-block__container">
-                        <img class="works-block__img" src="./img/works_img.jpg" alt="">
-                        <p class="works-block__text">
+                <div class="works__container --movie">
+                    <h3 class="works__title">モーショングラフィックス</h3>
+                    <div class="works__block">
+                        <video class="works__video" src="img/mv.mp4" controls muted></video>
+                        <p class="works__text">
                             <span>イラストやモーショングラフィックスを用いた企業のサービス紹介やコマーシャル風の動画を制作しました。</span>
                             <span>動画の中にあるタブレットなどの素材も自分自身で制作しました。</span>
                             <span>なるべくシンプルにわかりやすい作品になるように意識しました。</span>
-                            <span class="btn-outer"><a class="btn --works" href="listPage.html">View More</a></span>
                         </p>
                     </div>
                 </div>
 
-                <div class="works-block">
-                    <h3 class="works-block__title">イラスト・ポスター</h3>
-                    <div class="works-block__container">
-                        <p class="works-block__text">
+                <div class="works__container --img">
+                    <h3 class="works__title">イラスト・ポスター</h3>
+                    <div class="works__block">
+                        <div class="works__img">
+                            <img src="img/sauna1.jpg" alt="">
+                            <img src="img/sauna2.png" alt="">
+                            <img src="img/sauna3.png" alt="">
+                            <img src="img/sauna4.png" alt="">
+                            <img src="img/sauna5.png" alt="">
+                            <img src="img/sauna6.jpg" alt="">
+                        </div>
+                        <p class="works__text">
                             <span>サウナが好きでサウナへの愛を表現しようと思い始めました。サウナに対する思いが伝われば嬉しいです。</span>
                             <span>SNSにアップしているのでフォローよろしくお願いします！</span>
-                            <span>Instagram：<a class="account" href="https://www.instagram.com/vickeblanka/" target="_blank" rel="noopener noreferrer">@suke</a></span>
-                            <span class="btn-outer"><a class="btn --works" href="listPage.html">View More</a></span>
+                            <span>Instagram：<a class="account" href="https://www.instagram.com/"
+                                    target="_blank" rel="noopener noreferrer">@suke</a></span>
                         </p>
-                        <img class="works-block__img" src="./img/works_img.jpg" alt="">
                     </div>
                 </div>
 
-                <div class="works__btn">
-                    <a class="btn --works" href="listPage.html">View More</a>
-                </div>
+                <!-- <div class="works__btn">
+                    <a class="btn --works" href="page/listPage.html">View More</a>
+                </div> -->
             </div>
         </section>
 
-        <section class="about">
+        <section class="about" id="about">
+            <h2 class="visually-hidden">自己紹介</h2>
             <div class="about__inner">
-                <div class="about-block">
-                    <h3 class="about-block__title">すけ</h3>
-                    <div class="about-block__container">
-                        <div class="about-block__text">
+                <div class="about__container">
+                    <h3 class="about__title">SUKE<span>　- すけ -</span></h3>
+                    <div class="about__block">
+                        <div class="about__text">
+                            <p class="about_profile">
+                                <span>初めまして。<br>"<strong class="bold">すけ</strong>"という名前で活動しているフリーランスの映像クリエイターです。周りの人で私のことを"<strong class="bold">すけ</strong>"と呼ぶ人はいませんが"<strong class="bold">すけ</strong>"で覚えて頂けたら嬉しいです。</span>
+                                <span>モーショングラフィックス、写真のレタッチ、イラスト、ポスター制作をメインに活動しています。画像でも動画でも素敵な表現ができるようになることを目標にしています。</span>
+                            </p>
                             <p>
-                                <span>初めまして。"<strong class="bold">すけ</strong>"という名前で活動しているフリーランスの映像クリエイターです。
-                                    周りの人で私のことを"<strong class="bold">すけ</strong>"と呼ぶ人はいませんが"
-                                    <strong class="bold">すけ</strong>"で覚えて頂けたら嬉しいです。</span>
-                                <span>操れるソフトは［<strong class="bold">Adobe Afetr Effects</strong>］
-                                    ［<strong class="bold">Adobe Photoshop</strong>］［<strong class="bold">Adobe Illustrator</strong>］です。</span>
-                                <span>モーショングラフィックス、写真のレタッチ、イラスト、ポスター制作をメインに活動しています。
-                                画像でも動画でも素敵な表現ができるようになることを目標にしています。</span>
+                                <span>
+                                    <strong class="bold">使用ソフト</strong><br>
+                                    Adobe Afetr Effects / Blender <br>
+                                    Adobe Photoshop / Adobe Illustrator</span>
                             </p>
                         </div>
-                        <img class="about-block__img" src="./img/kensuke.jpg" alt="">
+                        <img class="about__img" src="./img/kensuke.jpg" alt="">
                     </div>
                 </div>
             </div>
@@ -96,8 +111,9 @@
             <div class="contact__outer">
                 <div class="contact__inner">
                     <h2 class="contact__title">Contact</h2>
-                    <p class="contact__text">お仕事のご相談やご依頼など、お気軽にご連絡ください！</p>
-                    <a class="btn --contact" href="https://www.instagram.com/meru_nukumi/" target="_blank" rel="noopener noreferrer">Contact Us</a>
+                    <p class="contact__text">お仕事のご相談やご依頼など、<br class="sp">お気軽にご連絡ください！</p>
+                    <a class="btn --contact" href="https://forms.gle/y1Hd1hg1sJMbh59D9" target="_blank"
+                        rel="noopener noreferrer">お問い合わせはこちら</a>
                 </div>
             </div>
         </section>
