@@ -16,15 +16,14 @@
     <header class="header">
         <div class="header__inner">
             <h1><a href="">SUKE</a></h1>
-            <nav>
-                <h2 class="visually-hidden">ナビゲーションメニュー</h2>
+            <nav aria-label="ナビゲーションメニュー">
                 <ul class="header__list">
                     <li class="header__item"><a href="#works">Works</a></li>
                     <li class="header__item"><a href="#about">About</a></li>
                     <li class="header__item"><a href="https://forms.gle/y1Hd1hg1sJMbh59D9" target="_blank"
                             rel="noopener noreferrer">Contact</a></li>
-                    <li class="header__item"><a href="https://www.youtube.com/"
-                            target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li class="header__item"><a href="https://www.youtube.com/" target="_blank"
+                            rel="noopener noreferrer">YouTube</a></li>
                     <li class="header__item"><a href="https://www.instagram.com/" target="_blank"
                             rel="noopener noreferrer">Instagram</a></li>
                 </ul>
@@ -47,10 +46,10 @@
                 <div class="works__container --movie">
                     <h3 class="works__title">モーショングラフィックス</h3>
                     <div class="works__block">
-                        <video class="works__video" src="img/pr.mp4" controls muted></video>
+                        <video class="works__video" src="img/pr.mp4" controls muted preload="metadata"></video>
                         <p class="works__text">
-                            <span>イラストやモーショングラフィックスを用いた企業のサービス紹介やコマーシャル風の動画を制作しました。</span>
-                            <span>動画の中にあるタブレットなどの素材も自分自身で制作しました。</span>
+                            <span>イラストやモーショングラフィックスを用いた、企業のサービス紹介やコマーシャル風の動画を制作しました。</span>
+                            <span>動画の中にあるタブレットなどの素材も自分自身で制作しています。</span>
                             <span>なるべくシンプルにわかりやすい作品になるように意識しました。</span>
                         </p>
                     </div>
@@ -59,19 +58,19 @@
                 <div class="works__container --img">
                     <h3 class="works__title">イラスト・ポスター</h3>
                     <div class="works__block">
-                        <div class="works__img">
-                            <img src="img/sauna1.jpg" alt="">
-                            <img src="img/sauna2.png" alt="">
-                            <img src="img/sauna3.png" alt="">
-                            <img src="img/sauna4.png" alt="">
-                            <img src="img/sauna1.jpg" alt="">
-                            <img src="img/sauna6.jpg" alt="">
+                        <div class="works__imgBox">
+                            <img src="img/sauna1.jpg" alt="" loading="lazy">
+                            <img src="img/sauna2.png" alt="" loading="lazy">
+                            <img src="img/sauna3.png" alt="" loading="lazy">
+                            <img src="img/sauna4.png" alt="" loading="lazy">
+                            <img src="img/sauna5.jpg" alt="" loading="lazy">
+                            <img src="img/sauna6.jpg" alt="" loading="lazy">
                         </div>
                         <p class="works__text">
                             <span>サウナが好きでサウナへの愛を表現しようと思い始めました。サウナに対する思いが伝われば嬉しいです。</span>
                             <span>SNSにアップしているのでフォローよろしくお願いします！</span>
-                            <span>Instagram：<a class="account" href="https://www.instagram.com/"
-                                    target="_blank" rel="noopener noreferrer">@suke</a></span>
+                            <span>Instagram：<a class="account" href="https://www.instagram.com/" target="_blank"
+                                    rel="noopener noreferrer">@suke</a></span>
                         </p>
                     </div>
                 </div>
@@ -90,7 +89,10 @@
                     <div class="about__block">
                         <div class="about__text">
                             <p class="about_profile">
-                                <span>初めまして。<br>"<strong class="bold">すけ</strong>"という名前で活動しているフリーランスの映像クリエイターです。周りの人で私のことを"<strong class="bold">すけ</strong>"と呼ぶ人はいませんが"<strong class="bold">すけ</strong>"で覚えて頂けたら嬉しいです。</span>
+                                <span>初めまして。<br>"<strong
+                                        class="bold">すけ</strong>"という名前で活動しているフリーランスの映像クリエイターです。周りの人で私のことを"<strong
+                                        class="bold">すけ</strong>"と呼ぶ人はいませんが"<strong
+                                        class="bold">すけ</strong>"で覚えて頂けたら嬉しいです。</span>
                                 <span>モーショングラフィックス、写真のレタッチ、イラスト、ポスター制作をメインに活動しています。画像でも動画でも素敵な表現ができるようになることを目標にしています。</span>
                             </p>
                             <p>
@@ -100,7 +102,7 @@
                                     Adobe Photoshop / Adobe Illustrator</span>
                             </p>
                         </div>
-                        <img class="about__img" src="./img/kensuke.jpg" alt="">
+                        <img class="about__img" src="./img/kensuke.jpg" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
@@ -108,13 +110,11 @@
         </section>
 
         <section class="contact">
-            <div class="contact__outer">
-                <div class="contact__inner">
-                    <h2 class="contact__title">Contact</h2>
-                    <p class="contact__text">お仕事のご相談やご依頼など、<br class="sp">お気軽にご連絡ください！</p>
-                    <a class="btn --contact" href="https://forms.gle/y1Hd1hg1sJMbh59D9" target="_blank"
-                        rel="noopener noreferrer">お問い合わせはこちら</a>
-                </div>
+            <div class="contact__inner">
+                <h2 class="contact__title">Contact</h2>
+                <p class="contact__text">お仕事のご相談やご依頼など、<br class="sp">お気軽にご連絡ください！</p>
+                <a class="btn --contact" href="https://forms.gle/y1Hd1hg1sJMbh59D9" target="_blank"
+                    rel="noopener noreferrer">お問い合わせはこちら</a>
             </div>
         </section>
     </main>
