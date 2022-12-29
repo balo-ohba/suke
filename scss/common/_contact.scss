@@ -3,12 +3,9 @@
 .contact {
     background-color: var.$color-base;
 
-    &__outer {
-        padding: 40px 8.33%; // 横幅1440pxに対して、120pxずつ取りたい
-    }
-
     &__inner {
         text-align: center;
+        padding: 40px calc(120 / 1440 * 100%);
     }
 
     &__title {
@@ -16,7 +13,7 @@
     }
 
     &__text {
-        margin-top: 40px;
+        padding-top: 40px;
         line-height: 1.5;
     }
 

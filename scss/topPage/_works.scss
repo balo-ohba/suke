@@ -4,98 +4,84 @@
     background-color: var.$color-base;
 
     &__inner {
-        padding: 8.33%; // 横幅1440pxに対して、120pxずつ取りたい
-    }
+        padding: 120px calc(120 / 1440 * 100%);
 
-    &__btn {
-        text-align: center;
+        @include var.mq(sp) {
+            padding: 40px calc(120 / 1440 * 100%);
+        }
     }
 
     &__container {
-        margin-left: calc(196px - 120px);
+        padding-left: calc(76px / 1440px * 100%);
         position: relative;
+        padding-top: 80px;
 
-        //右線
+        @include var.mq(sp) {
+            padding-top: 40px;
+            padding-left: 0;
+        }
+
+        //線装飾_左線
         &::before {
+            @include var.border();
             width: 1px;
-            height: 120%;
-            background-color: var.$color-sub;
-            display: block;
-            position: absolute;
-            top: -24px;
-            left: 0;
-            content: "";
-        }
-
-        //下線
-        &::after {
-            width: calc(100% + 20px);
-            height: 1px;
-            background-color: var.$color-sub;
-            display: block;
-            position: absolute;
-            bottom: -40px;
-            left: -20px;
-            content: "";
-        }
-
-        &.--movie {
-            margin-top: 160px;
+            height: 95%;
+            left: calc(76px / 1440px * 100%);
 
             @include var.mq(sp) {
-                margin-top: 120px;
+                height: 97%;
+                left: 0;
             }
-
         }
 
         &.--img {
-            margin-top: 320px;
-            margin-bottom: 160px;
+            margin-top: 80px;
 
             @include var.mq(sp) {
-                margin-top: 160px;
-                margin-bottom: 120px;
+                margin-top: 40px;
             }
-        }
-
-        @include var.mq(sp) {
-            margin-left: 0;
         }
     }
 
     &__title {
         font-size: 24px;
-        margin: 24px;
+        padding: 24px;
         position: relative;
 
-        //下線
-        &::after {
-            width: 380px;
-            height: 3px;
-            background-color: var.$color-accent;
-            display: block;
-            position: absolute;
-            bottom: -24px;
-            left: -40px;
-            content: "";
+        @include var.mq(sp) {
+            padding: 16px 8px;
         }
 
-        @include var.mq(sp) {
-            margin: 8px;
+        //線装飾_下線
+        &::after {
+            @include var.border();
+            background-color: var.$color-accent;
+            width: 380px;
+            height: 3px;
+            bottom: 0;
+            left: -20px;
 
-            //下線
-            &::after {
-                width: calc(100% + 8px + 24px);
-                left: -24px;
+            @include var.mq(sp) {
+                width: calc(100% + 20px);
             }
         }
     }
-    
+
     &__block {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         align-items: center;
+        position: relative;
+
+        //線装飾_下線
+        &::after {
+            @include var.border();
+            width: calc(100% + 20px);
+            height: 1px;
+            bottom: 0;
+            left: -20px;
+        }
     }
 
     &__text {
@@ -104,6 +90,7 @@
         line-height: 1.5;
         text-align: justify;
         position: relative;
+        padding-bottom: calc(40px - 16px);
 
         @include var.mq(sp) {
             width: 90%;
@@ -119,19 +106,24 @@
         width: 80%;
         height: auto;
         object-fit: contain;
-        margin: 40px 0;
+        padding: 40px 0;
 
         @include var.mq(sp) {
             width: 90%;
         }
     }
 
-    &__img {
+    &__imgBox {
         width: 80%;
-        margin: 40px 0;
+        padding: 40px 0;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 8px;
+        gap: calc(8 / 1440 * 100%);
+
+        @include var.mq(sp) {
+            width: 90%;
+            grid-template-columns: 1fr 1fr;
+        }
 
         img {
             width: 100%;

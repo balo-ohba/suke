@@ -21,3 +21,12 @@ $breakpoint: (
       @content;
    }
 }
+
+/* 線装飾_共通
+   ----------------------------------------------------------------- */
+@mixin border() {
+   content: "";
+   display: block;
+   position: absolute;
+   background-color: $color-sub;
+}

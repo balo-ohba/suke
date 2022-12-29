@@ -5,7 +5,6 @@
 @use "common/footer";
 @use "common/assets";
 @use "common/contact";
-@use "common/mainArea";
 
 /* topPage
    ----------------------------------------------------------------- */
@@ -18,4 +17,10 @@ html {
 
 main {
    @include var.font();
+}
+
+.mainArea {
+   &__video {
+       width: 100%;
+   }
 }

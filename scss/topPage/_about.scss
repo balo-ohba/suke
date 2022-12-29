@@ -6,52 +6,36 @@
     background-size: cover;
 
     &__inner {
-        padding: 8.33%; // 横幅1440pxに対して、120pxずつ取りたい
+        padding: 120px calc(120 / 1440 * 100%);
     }
 
     &__container {
         position: relative;
 
-        //左線
+        //線装飾_左線
         &::before {
+            @include var.border();
             width: 1px;
-            height: 120%;
-            background-color: var.$color-sub;
-            display: block;
-            position: absolute;
-            top: -24px;
-            left: 0;
-            content: "";
-
-            @include var.mq(sp) {
-                height: 100%;
-            }
+            height: 100%;
         }
     }
 
     &__title {
         font-size: 32px;
         font-weight: bold;
-        margin: 24px;
+        padding: 24px;
         position: relative;
 
-        //下線
+        //線装飾_下線
         &::after {
-            width: 380px;
-            height: 3px;
+            @include var.border();
             background-color: var.$color-accent;
-            display: block;
-            position: absolute;
-            bottom: -24px;
-            left: -40px;
-            content: "";
-        }
+            width: calc(380px / 1440px * 100%);
+            height: 3px;
+            left: -20px;
+            bottom: 0;
 
-        @include var.mq(sp) {
-            margin: 8px;
-
-            //下線
-            &::after {
+            @include var.mq(sp) {
                 width: calc(100% + 8px + 24px);
                 left: -24px;
             }
@@ -72,22 +56,22 @@
         width: 40%;
         font-size: 16px;
         line-height: 1.5;
-        margin-top: 40px;
+        padding-top: 40px;
+        padding-left: 24px;
         position: relative;
-        margin-left: 24px;
+
+        @include var.mq(sp) {
+            width: 90%;
+            padding-left: 0;
+        }
 
         p {
-            margin-bottom: 32px;
+            padding-bottom: 2em;
         }
 
         span {
             display: block;
-            margin-bottom: 16px;
-        }
-
-        @include var.mq(sp) {
-            width: 90%;
-            margin: 20px auto;
+            padding-bottom: 1em;
         }
     }
 
@@ -102,7 +86,7 @@
 
         @include var.mq(sp) {
             width: 90%;
-            margin-top: calc(8px + 24px + 20px);
+            padding-top: 40px;
         }
     }
 }
