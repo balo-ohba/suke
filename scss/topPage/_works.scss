@@ -16,6 +16,11 @@
         position: relative;
         padding-top: 80px;
 
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(50px);
+        transition: all 2s;
+
         @include var.mq(sp) {
             padding-top: 40px;
             padding-left: 0;
@@ -129,4 +134,11 @@
             width: 100%;
         }
     }
+}
+
+/* 画面領域に差し掛かった時に付与するクラス */
+.js-fade {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
 }

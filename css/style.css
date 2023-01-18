@@ -11,6 +11,7 @@
   color: #B3424A;
   padding: 1.3888888889% 8.3333333333%;
   position: fixed;
+  top: 0;
   width: calc(100% - 240px);
   z-index: 1000;
 }
@@ -147,6 +148,10 @@
   padding-left: 5.2777777778%;
   position: relative;
   padding-top: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 2s;
 }
 @media screen and (max-width: 850px) {
   .works__container {
@@ -264,6 +269,13 @@
 }
 .works__imgBox img {
   width: 100%;
+}
+
+/* 画面領域に差し掛かった時に付与するクラス */
+.js-fade {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
 }
 
 .about {
