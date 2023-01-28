@@ -14,6 +14,23 @@
   top: 0;
   width: calc(100% - 240px);
   z-index: 1000;
+  background: transparent;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+  transition: ease-in 0.5s all;
+}
+.header.js-headerHide {
+  transition: ease-in 0.5s all;
+  visibility: hidden;
+  opacity: 0;
+}
+.header.js-scroll {
+  background: #B3424A;
+  transition: ease-in 0.5s all;
+}
+.header.js-scroll a:hover {
+  color: #292724;
 }
 @media screen and (max-width: 850px) {
   .header {
