@@ -7,6 +7,27 @@
     width: calc(100% - 240px);
     z-index: 1000;
 
+    // js切り替え
+    background: transparent;
+    overflow: hidden;
+    visibility: visible;
+    opacity: 1;
+    transition: ease-in .5s all;
+
+    &.js-headerHide {
+        transition: ease-in .5s all;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    &.js-scroll {
+        background: var.$color-accent;
+        transition: ease-in .5s all;
+        a:hover {
+            color: var.$color-sub;
+        }
+    }
+
     @include var.mq(sp) {
         padding: 20px;
     }
