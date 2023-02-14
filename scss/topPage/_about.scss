@@ -53,7 +53,7 @@
     }
 
     &__text {
-        width: 40%;
+        width: 50%;
         font-size: 16px;
         line-height: 1.5;
         padding-top: 40px;
@@ -79,14 +79,21 @@
         text-align: justify;
     }
 
+    &__imgBox{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
     &__img {
         width: 50%;
         height: auto;
         object-fit: contain;
 
         @include var.mq(sp) {
-            width: 90%;
-            padding-top: 40px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 50%;
         }
     }
 }
