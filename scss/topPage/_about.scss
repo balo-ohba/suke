@@ -7,6 +7,9 @@
 
     &__inner {
         padding: 120px calc(120 / 1440 * 100%);
+        @include var.mq(sp) {
+            background: rgba(255, 255, 255, 0.5);
+        }
     }
 
     &__container {
