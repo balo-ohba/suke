@@ -333,6 +333,11 @@
 .about__inner {
   padding: 120px 8.3333333333%;
 }
+@media screen and (max-width: 850px) {
+  .about__inner {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
 .about__container {
   position: relative;
 }
